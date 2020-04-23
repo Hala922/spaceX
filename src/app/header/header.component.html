@@ -1,0 +1,32 @@
+<header>
+    <div class="mainContainer">
+      <div class="mailTitel">
+        <h1><span class="highlight">{{MainHeaderTiltel}} 
+            </span> API ROCKETS DEMO </h1>
+            <nav > 
+                <ul>
+                  <li><a routerLink="home"> Home </a></li>
+                  <li><a routerLink="rockets"> Rockets</a></li>
+                  <li><a routerLink="about"> About </a></li>
+                </ul>
+              
+              </nav>
+              
+      </div>
+    
+    </div>
+  
+  </header>
+  <section id="mainImage">
+    <div class="mainContainer">
+      
+         <router-outlet ></router-outlet>
+         <h1> {{curentRoute}} </h1>
+    </div>
+  </section>
+  
+  <footer>
+    <p>Spacex API DEMO Copyright &copy; 2020</p>
+  </footer>
+  
+ 

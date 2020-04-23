@@ -1,0 +1,32 @@
+<router-outlet></router-outlet>
+ 
+<h2>About  </h2>
+<app-show-loading *ngIf="showSpinner"> </app-show-loading>
+
+<div *ngIf="infos" class="container">
+      <mat-card class="card-look">
+        <mat-card-header>
+          <img mat-card-avatar class='card-avatar '
+          src='./../../assets/SPACEX.png'  
+          alt="" >    <br>
+        </mat-card-header>
+        <mat-card-content>
+              <p> name : {{infos.name}}</p>
+              <p> founder : {{infos.founder}}</p>
+              <p> founded : {{ infos.founded}}</p>
+              <p> employees : {{ infos.employees}}</p>
+              <p> headquarters : {{ infos.headquarters.address}} ,
+                {{ infos.headquarters.city}}  , {{ infos.headquarters.state}}
+              </p>
+              <p> founder : {{ infos.founder}}</p>
+              <p> flight_number : {{ infos. flight_number }}</p>
+              <p>summary : {{ infos.summary }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a routerLink="">GO Back </a>
+        </mat-card-actions>
+      </mat-card>
+      <router-outlet></router-outlet>
+    <div>
+
+     

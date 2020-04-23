@@ -1,0 +1,26 @@
+.card-look {
+  max-width: 700px;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 2px;
+  background-color:  hsl(210, 9%, 96%);
+  box-shadow: 20px;
+  }
+
+
+.card-avatar  {
+    
+        top: 0;
+        padding: 2px;
+        margin : 2px
+           }
+
+button   {
+ padding-left: 20px;
+  padding-right:20px;
+               }
+   
+  
+
+
+  

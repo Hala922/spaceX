@@ -1,0 +1,38 @@
+<router-outlet></router-outlet>
+
+<app-show-loading *ngIf="showSpinner"> </app-show-loading>
+
+
+  <div class="container-fluid" *ngFor="let rocket of allrocketObj">
+
+    <mat-card class="card-look">
+      <mat-card-header>
+        <mat-card-title>  {{ rocket.rocket_name }} </mat-card-title> 
+        <img mat-card-avatar class='card-avatar '
+            src='./../../assets/{{ rocket.rocket_name }}.png'  
+              alt="" >
+         
+        </mat-card-header> 
+      <img mat-card-image src={{rocket.flickr_images[0]}} 
+      alt="" >
+      <mat-card-content>
+        {{ rocket.description }}
+      </mat-card-content>
+      <mat-card-actions>  
+        <a [routerLink]="['/detail',rocket.rocket_id]" >
+          <button mat-button >
+              {{ rocket.rocket_name }}
+          </button>
+        </a>
+        <a routerLink=""> 
+          <button mat-button   >
+           GO BACK
+        </button>  
+        </a>
+             
+      </mat-card-actions>
+    </mat-card>
+      
+</div>
+<router-outlet></router-outlet>
+  

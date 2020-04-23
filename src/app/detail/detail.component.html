@@ -1,0 +1,41 @@
+<router-outlet></router-outlet>
+
+<app-show-loading *ngIf="showSpinner"> </app-show-loading>
+
+<div *ngIf="rocketObj" class="container">
+  <mat-card class="card-look">
+    <mat-card-header>
+      <mat-card-title> {{ rocketObj.rocket_name }} </mat-card-title>
+      <img mat-card-avatar class='card-avatar '
+          src='./../../assets/{{ rocketObj.rocket_name }}.png'  
+          alt="" >
+    </mat-card-header>
+  
+    <img mat-card-image src={{rocketObj.flickr_images[1]}}
+        alt={{rocketObj.rocket_name}}>
+    <img mat-card-image src={{rocketObj.flickr_images[2]}} 
+        alt={{rocketObj.flickr_images[2]}}>
+    <mat-card-content>
+      <p>Name : {{ rocketObj.rocket_name }}</p>
+      <p>first_flight : {{ rocketObj.first_flight }}</p>
+      <p>country : {{ rocketObj.country }}</p>
+      <p>height : {{ rocketObj.height.meters }} meters </p>
+      <p>diameter : {{ rocketObj.diameter.meters }} meters</p>
+      <p>mass : {{ rocketObj.mass.kg }} kg </p>
+      <p>description : {{ rocketObj.description }}</p>
+      <br>
+      <a  href={{rocketObj.wikipedia}}>wikipedia link  
+      </a>
+   
+    </mat-card-content>
+    <mat-card-actions>
+           
+            <a routerLink="/rockets">  
+              <button mat-button color="blue">
+                GO Back
+              </button>
+            </a>
+
+  </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,59 @@
+
+
+<router-outlet></router-outlet>
+
+<h2>Historical Events </h2>
+
+<app-show-loading *ngIf="showSpinner"> </app-show-loading>
+
+
+
+  <div class="container-fluid" *ngFor="let hEvent of historyEvents">
+  
+      <mat-card class="card-look">
+        <mat-card-header>
+           <mat-card-title>
+               {{ hEvent.title}}
+           </mat-card-title>
+           <mat-card-subtitle>
+             flight # {{ hEvent. flight_number }}
+           </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+           <p>    details : {{ hEvent.details }}   
+              </mat-card-content>
+        <mat-card-actions>  
+          <a  href={{hEvent.links.wikipedia}}>
+            <button mat-button >
+              wikipedia link
+            </button>
+          </a>
+          <a routerLink=""> 
+            <button mat-button   >
+             GO BACK
+          </button>  
+          </a>
+               
+        </mat-card-actions>
+
+
+  
+     </mat-card>
+ 
+  
+    </div>
+
+
+       <!--
+        <div mat-card-avatar class="example-header-image"></div>
+         <div card-logo class="card-image"></div>
+         ----
+      
+        <div class='md-padding' layout="row" flex>
+    <div layout="row" flex>
+      <div class="parent" layout="column" ng-repeat="user in users" flex>
+  
+       --> 
+       
+  
+  

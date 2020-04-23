@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'spaceX';
+  title = 'SpaceX  ';
+  
+  childData: string;
+  captureEmittedData(emittedData) {
+    console.log(emittedData);
+    this.childData = emittedData;
+ 
+  }
 }
