@@ -4,15 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule } from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 
-//import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule, MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS_FACTORY } from '@angular/material/progress-spinner';
-
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
 import { HomeComponent } from './home/home.component';
 import { RocketsComponent } from './rockets/rockets.component';
 import { DetailComponent } from './detail/detail.component';
@@ -38,7 +35,6 @@ import { HeaderComponent } from './header/header.component';
     MatCardModule,
     BrowserAnimationsModule,
     MatGridListModule,
-//    MatTableModule,
     MatProgressSpinnerModule,
     MatButtonModule,
   ],

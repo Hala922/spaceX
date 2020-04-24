@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SpaceX  ';
+  footerContent: string;
+
+  captureEmittedData(emittedData) {
+  
+    this.footerContent = emittedData;
+    
+  }
+
   
 }

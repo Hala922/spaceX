@@ -1,2 +1,4 @@
-<app-header [MainHeaderTiltel]="title"></app-header>
-
+<app-header [MainHeaderTiltel]="title"
+            (dataEmitter)="captureEmittedData($event)">
+</app-header>
+<h1> footerContent {{footerContent}}</h1>
