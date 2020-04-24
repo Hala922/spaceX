@@ -14,9 +14,14 @@ export class RocketsComponent implements OnInit {
   allrocketObj;
   rocketsApiError: any;
   showSpinner:boolean =true ;
-  curentRoute;
+  recivedCurentRoute;
  // AvatarFileName :string ;
-;
+
+  captureEmittedData(emittedData) {
+        console.log(emittedData);
+        this.recivedCurentRoute = emittedData;
+  }
+ 
 
   ngOnInit(): void {
     this.RoketsService.getAllRockets().subscribe(response => 
@@ -24,8 +29,7 @@ export class RocketsComponent implements OnInit {
       setTimeout(() => {     
         this.allrocketObj = response; 
         this.showSpinner =false;
-        this.curentRoute=this.allrocketObj.rocket_name;
-          }, 1000);
+         }, 1000);
     },(error) => 
     { this.rocketsApiError = error; }
   );

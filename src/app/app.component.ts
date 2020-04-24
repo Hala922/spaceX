@@ -8,10 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'SpaceX  ';
   
-  childData: string;
-  captureEmittedData(emittedData) {
-    console.log(emittedData);
-    this.childData = emittedData;
- 
-  }
 }

@@ -1,4 +1,6 @@
-<router-outlet></router-outlet>
+<router-outlet > </router-outlet>
+
+  <h2 (dataEmitter)="captureEmittedData($event)"> {{recivedCurentRoute }}</h2>
 
 <app-show-loading *ngIf="showSpinner"> </app-show-loading>
 

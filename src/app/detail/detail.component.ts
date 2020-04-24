@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit,Output, Input ,EventEmitter } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 import { RoketsService } from '../rokets.service';
@@ -14,14 +14,20 @@ export class DetailComponent implements OnInit {
     private roketsServiceObj: RoketsService,
     private route: ActivatedRoute,
   ) { }
+  
+  @Output() dataEmitter: 
+    EventEmitter<any> = new EventEmitter<any>();
 
- // @Input() AvatarFileName: string;
-
+   // @Input() AvatarFileName: string;
   rocketObj;
   detailApiError: any;
   showSpinner:boolean =true ;
   curentRocket;
   
+  emittingFunction() {
+    this.dataEmitter.emit(this.curentRocket);
+  }
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
        const rocket_id= params.rocket_id;
@@ -32,11 +38,13 @@ export class DetailComponent implements OnInit {
                        this.rocketObj= response;
                        this.showSpinner =false;
                        this.curentRocket=this.rocketObj.rocket_name;
+                       this.emittingFunction();
                    }, 1000); // set time out
                 },(error) => 
                 { this.detailApiError = error; }
                 ) // inner subscribe for detail route 
       }); // outer subscribe for rockets route 
+    
   }
 }
 

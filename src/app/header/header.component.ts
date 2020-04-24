@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   @Input() MainHeaderTiltel: string;
-  @Input() curentRoute: string; 
+  
   ngOnInit(): void {
   }
 
